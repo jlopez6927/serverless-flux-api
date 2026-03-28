@@ -1,0 +1,25 @@
+# Python caches and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+env/
+venv/
+.venv/
+
+# Environment variables and secrets
+.env
+secret*.json
+
+# IDE and Editor folders
+.vscode/
+.idea/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore dynamically generated test images from test_endpoint.py
+generated_image_*.png
