@@ -16,6 +16,7 @@ Instead of baking the 24GB model directly into a Docker image (which causes terr
 ├── requirements.txt    ← Python dependencies (pinned to avoid math errors)
 ├── test_endpoint.py    ← Local test script (prompts user and saves timestamped image)
 └── .gitignore          ← Protects API keys and ignores generated test images
+```
 
 ## Prerequisites
 Requirement	              Notes
@@ -40,7 +41,7 @@ Visit [FLUX.1-dev](https://huggingface.co/black-forest-labs/FLUX.1-dev) on Huggi
 pip install huggingface_hub
 
 export HF_TOKEN="your_huggingface_token"
-
+```text
 cat << 'EOF' > download_model.py
 import os
 from huggingface_hub import snapshot_download
@@ -53,7 +54,7 @@ snapshot_download(
     ignore_patterns=["flux1-dev.safetensors", "ae.safetensors"]
 )
 EOF
-
+```
 python download_model.py
 
 4. Once the download finishes, terminate this temporary Pod.

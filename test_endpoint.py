@@ -12,7 +12,7 @@ headers = {
     "Content-Type": "application/json"
 }
 
-# This asks you to type your prompt in the terminal
+
 user_prompt = input("🏴‍☠️ Enter your prompt for FLUX: ")
 
 payload = {
@@ -29,7 +29,6 @@ result = response.json()
 if 'output' in result and 'image' in result['output']:
     image_data = base64.b64decode(result['output']['image'])
     
-    # Creates a unique filename using the current time
     timestamp = int(time.time())
     file_name = f"generated_image_{timestamp}.png"
     
